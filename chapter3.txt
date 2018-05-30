@@ -1,1 +1,109 @@
 The donkey chilled with Shreek
+
+Lecture logs:
+
+
+dimitriospapageorgiou@Dimitrioss-MacBook-Pro.local [~]$ cd Desktop/
+dimitriospapageorgiou@Dimitrioss-MacBook-Pro.local [~/Desktop]$ mkdir Story
+dimitriospapageorgiou@Dimitrioss-MacBook-Pro.local [~/Desktop]$ cd Story/
+dimitriospapageorgiou@Dimitrioss-MacBook-Pro.local [~/Desktop/Story]$ ls
+dimitriospapageorgiou@Dimitrioss-MacBook-Pro.local [~/Desktop/Story]$ touch chapter1.txt
+dimitriospapageorgiou@Dimitrioss-MacBook-Pro.local [~/Desktop/Story]$ open chapter1.txt 
+dimitriospapageorgiou@Dimitrioss-MacBook-Pro.local [~/Desktop/Story]$ git init
+Initialized empty Git repository in /Users/dimitriospapageorgiou/Desktop/Story/.git/
+dimitriospapageorgiou@Dimitrioss-MacBook-Pro.local [~/Desktop/Story]$ ls -a
+.		..		.git		chapter1.txt
+dimitriospapageorgiou@Dimitrioss-MacBook-Pro.local [~/Desktop/Story]$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	chapter1.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+dimitriospapageorgiou@Dimitrioss-MacBook-Pro.local [~/Desktop/Story]$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+	new file:   chapter1.txt
+
+dimitriospapageorgiou@Dimitrioss-MacBook-Pro.local [~/Desktop/Story]$ git commit -m "Complete Chapter 1-written in present tense"
+[master (root-commit) 9bd5836] Complete Chapter 1-written in present tense
+ 1 file changed, 1 insertion(+)
+ create mode 100644 chapter1.txt
+dimitriospapageorgiou@Dimitrioss-MacBook-Pro.local [~/Desktop/Story]$ git log
+commit 9bd5836324e8e34c49430842383d8ae92d9d453f (HEAD -> master)
+Author: Dimitrios Papageorgiou <dmpapageo@gmail.com>
+Date:   Wed May 30 18:51:51 2018 -0400
+
+    Complete Chapter 1-written in present tense
+dimitriospapageorgiou@Dimitrioss-MacBook-Pro.local [~/Desktop/Story]$ touch chapter2.txt
+dimitriospapageorgiou@Dimitrioss-MacBook-Pro.local [~/Desktop/Story]$ touch chapter3.txt
+dimitriospapageorgiou@Dimitrioss-MacBook-Pro.local [~/Desktop/Story]$ open chapter2.txt 
+dimitriospapageorgiou@Dimitrioss-MacBook-Pro.local [~/Desktop/Story]$ open chapter3.txt 
+dimitriospapageorgiou@Dimitrioss-MacBook-Pro.local [~/Desktop/Story]$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	chapter2.txt
+	chapter3.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+dimitriospapageorgiou@Dimitrioss-MacBook-Pro.local [~/Desktop/Story]$ git add .
+dimitriospapageorgiou@Dimitrioss-MacBook-Pro.local [~/Desktop/Story]$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   chapter2.txt
+	new file:   chapter3.txt
+
+dimitriospapageorgiou@Dimitrioss-MacBook-Pro.local [~/Desktop/Story]$ git commit -m "Complete Chapter 2 and 3"
+[master 7fe401e] Complete Chapter 2 and 3
+ 2 files changed, 2 insertions(+)
+ create mode 100644 chapter2.txt
+ create mode 100644 chapter3.txt
+dimitriospapageorgiou@Dimitrioss-MacBook-Pro.local [~/Desktop/Story]$ git status
+On branch master
+nothing to commit, working tree clean
+dimitriospapageorgiou@Dimitrioss-MacBook-Pro.local [~/Desktop/Story]$ git log
+commit 7fe401e825db953078a2274e5ca68420f95043f9 (HEAD -> master)
+Author: Dimitrios Papageorgiou <dmpapageo@gmail.com>
+Date:   Wed May 30 18:55:32 2018 -0400
+
+    Complete Chapter 2 and 3
+
+commit 9bd5836324e8e34c49430842383d8ae92d9d453f
+Author: Dimitrios Papageorgiou <dmpapageo@gmail.com>
+Date:   Wed May 30 18:51:51 2018 -0400
+
+    Complete Chapter 1-written in present tense
+dimitriospapageorgiou@Dimitrioss-MacBook-Pro.local [~/Desktop/Story]$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   chapter3.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+dimitriospapageorgiou@Dimitrioss-MacBook-Pro.local [~/Desktop/Story]$ git diff  chapter3.txt 
+diff --git a/chapter3.txt b/chapter3.txt
+index 6cebd1d..19d0a9b 100644
+--- a/chapter3.txt
++++ b/chapter3.txt
+@@ -1 +1 @@
+-The donkey chilled with Shreek
+\ No newline at end of file
++ooooooooxxiiiiiiii
+dimitriospapageorgiou@Dimitrioss-MacBook-Pro.local [~/Desktop/Story]$ git checkout chapter3.txt 
+dimitriospapageorgiou@Dimitrioss-MacBook-Pro.local [~/Desktop/Story]$ open chapter3.txt 
+dimitriospapageorgiou@Dimitrioss-MacBook-Pro.local [~/Desktop/Story]$ 
